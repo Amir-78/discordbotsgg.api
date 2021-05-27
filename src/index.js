@@ -145,8 +145,11 @@ class DISBOTSAPI extends EventEmitter {
 
                     }
 
-                }
-
+                }else{
+					
+					this.data = data;
+					
+				}
 
                 fetch(`${API_URL}/${endpoint}`, { method: `${method}`, headers: { 'Content-Type': 'application/json', 'Authorization': this.token }, body: JSON.stringify(this.data) }).then(res => {
 
