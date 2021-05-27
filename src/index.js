@@ -151,6 +151,7 @@ class DISBOTSAPI extends EventEmitter {
 					
 				}
 
+
                 fetch(`${API_URL}/${endpoint}`, { method: `${method}`, headers: { 'Content-Type': 'application/json', 'Authorization': this.token }, body: JSON.stringify(this.data) }).then(res => {
 
 
@@ -201,7 +202,7 @@ class DISBOTSAPI extends EventEmitter {
 
         }
 
-        this.reqAPI("post", `bots/645561062271352833/stats`, data);
+        this.reqAPI("post", `bots/${this.client.user.id}/stats`, data);
 
     }// end poster
 
