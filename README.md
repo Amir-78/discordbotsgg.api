@@ -1,18 +1,18 @@
-# discordbots.api
+# discordbotsgg.api
 This package makes it easy for you to use the [discord.bots.gg](https://discord.bots.gg/) API, Contains automatic posting stats of (Guilds count, Shards count, Shard id).
 
 ## Installation
 
 
 ```bash
-npm i discordbots.api
+npm i discordbotsgg.api
 ```
 
 ## Usage
 
 ```js
 
-const DSC = require('discordbots.api');
+const DSC = require('discordbotsgg.api');
 const dscbots = new DSC("YOUR_TOKEN_HERE", client);
 
 
