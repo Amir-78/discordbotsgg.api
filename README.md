@@ -9,7 +9,7 @@ This package makes it easy for you to use the [discord.bots.gg](https://discord.
 - Download [Node.js](https://nodejs.org)
 - Write in CMD / Terminal:
 ```bash
-npm i discordbots.api
+npm i discordbotsgg.api
 ```
 ## Example Code:
 
