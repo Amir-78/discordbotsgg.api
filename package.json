@@ -1,7 +1,7 @@
 {
   "name": "discordbotsgg.api",
   "version": "2.0.0",
-  "description": "This package makes it easy for you to use the discord.bots.gg API, Contains automatic posting stats of (Guilds count, Shards count, Shard id).",
+  "description": "This package makes it easy for you to use the discord.bots.gg API",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
