@@ -2,8 +2,8 @@
 This package makes it easy for you to use the [discord.bots.gg](https://discord.bots.gg/) API
 ## Installation
 <div align="center">
-    <a href="https://www.npmjs.com/package/discordbots.api"><img src="https://img.shields.io/npm/v/discordbots.api.svg?maxAge=3600" alt="npm version" /></a>
-    <a href="https://www.npmjs.com/package/discordbots.api"><img src="https://img.shields.io/npm/dt/discordbots.api.svg?maxAge=3600" alt="npm downloads" /></a>
+    <a href="https://www.npmjs.com/package/discordbotsgg.api"><img src="https://img.shields.io/npm/v/discordbotsgg.api.svg?maxAge=3600" alt="npm version" /></a>
+    <a href="https://www.npmjs.com/package/discordbotsgg.api"><img src="https://img.shields.io/npm/dt/discordbotsgg.api.svg?maxAge=3600" alt="npm downloads" /></a>
 </div>
 
 - Download [Node.js](https://nodejs.org)
@@ -14,7 +14,7 @@ npm i discordbotsgg.api
 ## Example Code:
 
 ```javascript
-const dbAPI = require('discordbots.api');
+const dbAPI = require('discordbotsgg.api');
 const { Client, Intents, } = require('discord.js');
 const client = new Client({
     intents: [Intents.FLAGS.GUILDS,]
