@@ -1,0 +1,35 @@
+{
+  "name": "discordbotsgg.api",
+  "version": "2.0.0",
+  "description": "This package makes it easy for you to use the discord.bots.gg API, Contains automatic posting stats of (Guilds count, Shards count, Shard id).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amir-78/discordbots.api.git"
+  },
+  "keywords": [
+    "discord.bots.gg",
+    "discordbots.api",
+    "discordbotsgg",
+    "discordbotsgg",
+    "discord.js",
+    "discord",
+    "djs",
+    "discordbots",
+    "bots",
+    "bot"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Amir-78/discordbots.api/issues"
+  },
+  "homepage": "https://github.com/Amir-78/discordbots.api#readme",
+  "dependencies": {
+    "discord.js": "^13.7.0",
+    "djs-helper": "^1.0.9"
+  }
+}

@@ -1,77 +1,43 @@
 # discordbotsgg.api
-This package makes it easy for you to use the [discord.bots.gg](https://discord.bots.gg/) API, Contains automatic posting stats of (Guilds count, Shards count, Shard id).
-
+This package makes it easy for you to use the [discord.bots.gg](https://discord.bots.gg/) API
 ## Installation
+<div align="center">
+    <a href="https://www.npmjs.com/package/discordbots.api"><img src="https://img.shields.io/npm/v/discordbots.api.svg?maxAge=3600" alt="npm version" /></a>
+    <a href="https://www.npmjs.com/package/discordbots.api"><img src="https://img.shields.io/npm/dt/discordbots.api.svg?maxAge=3600" alt="npm downloads" /></a>
+</div>
 
-
+- Download [Node.js](https://nodejs.org)
+- Write in CMD / Terminal:
 ```bash
-npm i discordbotsgg.api
+npm i discordbots.api
 ```
+## Example Code:
 
-## Usage
+```javascript
+const dbAPI = require('discordbots.api');
+const { Client, Intents, } = require('discord.js');
+const client = new Client({
+    intents: [Intents.FLAGS.GUILDS,]
+});
 
-```js
-
-const DSC = require('discordbotsgg.api');
-const dscbots = new DSC("YOUR_TOKEN_HERE", client);
-
-
-
-//Automatic post stats (guildCount, shardCount, shardId)
-dscbots.on('statsPosted', () => {
-    console.log('[discordbots.api] posted!');
-  })
-
-//Get Bot with ID
-
-dscbots.getBot("BOT_ID").then(results => {
-
-console.log(results);
-
-/* results output:
-
-{ Bot }
-
-*/
-
+client.on('ready', async () => {
+    console.log(`Logged in as ${client.user.tag}!`);
+    //PostStats;
+    await dbAPI.postStats(client, "API_TOKEN", "BOT_ID", false);
 
 });
 
-//Get Bots
-
-let options = {
-
-   page: 0,
-   limit: 1,
-   order: 'ASC'
-
-} //More options here: https://discord.bots.gg/docs/endpoints#get_bots
-
-dscbots.getBots(options).then(results => {
-
-console.log(results);
-
-/*results output:
-
-{
-  "count": 1000, // total number of matching bots
-  "limit": 50, // the max number of bots to retrieve
-  "page": 0, // the current page
-  "bots": [
-    // Uses the Bot structure
-    { Bot }, { Bot }, { Bot }, etc...
-  ]
-}
-
-*/
-
-});
-
+client.login("TOKEN");
 ```
 
+## Documentation
+### Functions:
 
+ **Name**      | **Params**            | **Type**           | **Function**           | **Returns**                                                                                                 
+---------------|-----------------------|--------------------|------------------------|------------------------------------------------------------------------------------
+ await postStats()     | `client`,`api_token`,`botID`,`refresh`             | `Object (Discord.Client)`,`String`,`String`,`Boolean`           | `Posts your Bot Stats automatically, if refresh is` true `it will update your bot stats every 30 mins`  | `/`                                                                    
+ await getBot() | `botID`,`sanitized`   | `String`,`Boolean` | `Get a bot using ID`| `Object ({ Bot })`
+ await getBots()    | [Query Params](https://discord.bots.gg/docs/endpoints#get_bots)            | [Query Params Types](https://discord.bots.gg/docs/endpoints#get_bots)           | `Search for bots using Query Parameters`| `Object`                                                                                         
 
-## Discord Bots: 
-##### [DOCS](https://discord.bots.gg/docs) | [SITE](https://discord.bots.gg/)
-
-### Developer: `Amir.#0001`
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
