@@ -26,7 +26,7 @@ async function postStats(client, api_token, id, refresh = false) {
 async function getBot(id, sanitized = false) {
     //Errors;
     if (typeof sanitized != "boolean") throw new TypeError('sanitized must be a boolean');
-    if (!id || isNaN(id) || id.length != 18) throw new SyntaxError('pass a correct BOT ID');
+    if (!id || isNaN(id) || (id.length != 18 && id.length != 19)) throw new SyntaxError('pass a correct BOT ID');
     try {
         let response = await (await fetch(`https://discord.bots.gg/api/v1/bots/${id}?sanitized=${sanitized}`)).json();
         return response;
